@@ -1,0 +1,58 @@
+@mixin components-centered {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    @include components-centered();
+    background-color: $light-gray;
+    min-height: 100vh;
+    justify-content: center;
+}
+
+.c-card {
+    @include components-centered();
+    background-color: $white;
+    border-radius: 15px;
+    box-shadow: 0px 12px 18px -18px $grayish-blue;
+    box-sizing: border-box;
+    gap: 24px;
+    height: 500px;
+    padding: 16px;
+    width: 320px;
+}
+
+.cc-image {
+    height: 290px;
+    width: 290px;
+}
+
+img{
+
+    border-radius: 10px;
+    height: 100%;
+    width: 100%;
+}
+
+.cc-information{
+    @include components-centered();
+    gap: 16px;
+    justify-content: center;
+    width: 260px;
+
+    .cci-title{
+        color: $dark-blue;
+        font-size: 22px;
+        font-weight: 700;
+        text-align: center;
+    }
+
+    .cci-description{
+        color: $grayish-blue;
+        font-size: 16px;
+        font-weight: 400;
+        text-align: center;
+    }
+    
+}
